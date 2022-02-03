@@ -1,9 +1,9 @@
-
 // Show current date 
 function main() {
     $('#currentDay').text(moment().format('dddd MMMM do YYYY'));  
     updateTime();
-    $(document).on('click','.saveBtn', saveBtn)
+    getData();
+    $(document).on('click','.saveBtn', saveBtn);
 };
 
 // select hour compare to time, and update textarea color 
@@ -22,11 +22,18 @@ function updateTime() {
     });
 };
 
+// get saved text area from local storage
+function getData() {
+    $('.description').each(function() {
+        var id = $(this).parent('.time-block').attr('id');
+        $(this).text(localStorage.getItem(id));
+    })
+};
 // added save button function 
 function saveBtn(event) {
     var textArea = $(event.target).siblings('.description').val(); /// grabs sibling and class input data
     var hourParent = $(event.target).parent('.time-block').attr('id'); /// grabs parent and class id attribute for hours 
-    localStorage.setItem(hourParent, textArea);
-}
+    localStorage.setItem(hourParent, textArea); /// function that saves local storage for time-block textarea
+};
 
 $(document).ready(main)
