@@ -60,5 +60,5 @@ Daily Planner
 
 ## Landing Page Screen Shoot
 
-* ![]()
-* ![]()
+* ![](assets/image/Landingpage.png)
+* ![](assets/image/Textarea.png)
