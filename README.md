@@ -47,6 +47,7 @@ SO THAT I can manage my time effectively
 
 * HTML
 * CSS
+* Javascript
 * Bootstrap 5.0
 * [Moment.js]{https://momentjs.com/}
 
